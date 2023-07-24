@@ -23,7 +23,7 @@ router.post("/register", async (req, res) => {
         
         });
         await newUser.save();
-        return res.json("user account created sucessfully");
+        return res.json("user account created sucessfully...");
     }
 });
 
@@ -79,7 +79,7 @@ router.post("/classschedules", async (req, res) => {
     //check the user already exist with this email
     const takenEmail = await Cs.findOne({ course: course });
     if (takenEmail) {
-        return res.status(405).json("username already exists");
+        return res.status(405).json("course already exists");
     } else {
         // password = await bcrypt.hash(req.body.password, 10);
         const newCs = new Cs({
@@ -88,7 +88,7 @@ router.post("/classschedules", async (req, res) => {
             time,
         });
         await newCs.save();
-        return res.json("user account created sucessfully");
+        return res.json("Class Schedule added sucessfully...");
     }
 });
 
@@ -113,7 +113,7 @@ router.post("/studentrecords", async (req, res) => {
             mobileno,
         });
         await newSrrr.save();
-        return res.json("user account created sucessfully");
+        return res.json("Student Record added sucessfully...");
     }
 });
 

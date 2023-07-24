@@ -16,7 +16,7 @@ app.use(cors({
 }));
 
 //connect mongobd
-mongoose.connect('mongodb+srv://aryandevanaboina:aryan@cluster4.bfvhydy.mongodb.net/myprojectdb?retryWrites=true&w=majority').then(
+mongoose.connect('mongodb+srv://aryandevanaboina:aryan@cluster5.er9h5pa.mongodb.net/codegnandb?retryWrites=true&w=majority').then(
     console.log("Db is connected")
 );
 
